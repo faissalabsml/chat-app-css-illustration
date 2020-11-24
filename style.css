@@ -28,6 +28,12 @@ body::before, body::after {
   z-index: -1;
 }
 
+@media only screen and (min-width: 50em) {
+  body::before, body::after {
+    width: 30%;
+  }
+}
+
 body::before {
   background: -webkit-gradient(linear, right top, left bottom, from(#e942ff), to(#8838ff));
   background: linear-gradient(to left bottom, #e942ff, #8838ff);
@@ -63,7 +69,9 @@ body::after {
     display: block;
     border-top-right-radius: 50rem;
     height: 80rem;
-    right: -10rem;
+    right: -20rem;
+    bottom: -7rem;
+    width: 40%;
   }
 }
 
@@ -145,13 +153,14 @@ body::after {
 
 .phone {
   background: white;
-  width: 28rem;
+  width: 27rem;
   margin: 0 auto;
   -webkit-box-shadow: 2px 2px 30px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 2px 2px 30px 0px rgba(0, 0, 0, 0.2);
   border-radius: 4rem;
   margin-bottom: 5rem;
   padding: 1rem;
+  font-size: .9rem;
 }
 
 .phone__screen {
@@ -163,7 +172,6 @@ body::after {
 @media only screen and (min-width: 62.5em) {
   .phone {
     margin-bottom: 0;
-    width: 29rem;
   }
 }
 
@@ -196,8 +204,8 @@ body::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1rem;
-  padding: 1rem;
+  gap: .7rem;
+  padding: .9rem;
 }
 
 .app__footer {
@@ -321,10 +329,10 @@ body::after {
 .bubble--sender {
   background: rgba(146, 65, 200, 0.1);
   color: #9241c8;
-  padding: 1rem;
+  padding: .9rem;
   border-radius: 1.2rem;
   border-bottom-left-radius: 3px;
-  width: 16rem;
+  width: 15rem;
 }
 
 .option {
@@ -338,23 +346,25 @@ body::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: .9rem 1.5rem;
 }
 
 .option__icon {
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
   border: 2px dotted #e570ff;
   border-radius: 100px;
   margin-right: 1.2rem;
 }
 
 .option__price {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 700;
   margin-left: auto;
 }
 
 .bubble--recipient {
+  color: #6e5d7e;
   -ms-flex-item-align: end;
       align-self: flex-end;
   background: white;
@@ -375,7 +385,7 @@ body::after {
 
 .bubble--recipient__images img {
   border-radius: 1.5rem;
-  width: 5rem;
+  width: 4.7rem;
 }
 
 .bubble--recipient__images img:not(:last-child) {
